@@ -1,9 +1,35 @@
+<div align="center">
+
 # github-org-map-public
 
-Generates a dated public map of the repositories owned by a GitHub account
-and its organizations: an SVG snapshot for "today", a dated history of past
-snapshots, and a GIF assembled from that history so you can see how the
-account/org map has changed over time.
+<p>
+  <strong>🇺🇸 English</strong> ·
+  <a href="./docs/locales/ko.md">🇰🇷 한국어</a> ·
+  <a href="./docs/locales/zh-CN.md">🇨🇳 中文</a> ·
+  <a href="./docs/locales/es.md">🇪🇸 Español</a> ·
+  <a href="./docs/locales/hi.md">🇮🇳 हिन्दी</a><br />
+  <a href="./docs/locales/ar.md">🇸🇦 العربية</a> ·
+  <a href="./docs/locales/pt-BR.md">🇧🇷 Português</a> ·
+  <a href="./docs/locales/ru.md">🇷🇺 Русский</a> ·
+  <a href="./docs/locales/fr.md">🇫🇷 Français</a> ·
+  <a href="./docs/locales/id.md">🇮🇩 Bahasa Indonesia</a>
+</p>
+
+</div>
+
+## About
+
+A daily-refreshed map of the repositories owned by the KS-GG-AI account and the AI-GG-AUTO-WORK organization. Public repositories appear with their real names; private repositories appear only as masked labels, and some are omitted entirely. Each day's snapshot is kept in `history/` and combined into an animated GIF.
+
+<p align="center">
+  <img src="./org-map.svg" alt="Organization map of the KS-GG-AI account and the AI-GG-AUTO-WORK organization, with private repositories shown as masked labels." width="100%" />
+</p>
+
+## How it works
+
+This repository generates the map itself: an SVG snapshot for "today", a
+dated history of past snapshots, and a GIF assembled from that history so you
+can see how the account/org map has changed over time.
 
 Every repository whose visibility is private has its name replaced with a
 masked label; public repos are shown with their real names, since that
@@ -78,3 +104,9 @@ falls back to `ORG_READ_TOKEN`, then `GITHUB_TOKEN`.
 ```sh
 npm test
 ```
+
+## Contact
+
+For questions, feedback, or ideas about the map, these are the clearest starting points.
+
+[GitHub profile](https://github.com/KS-GG-AI) · [Profile repository](https://github.com/KS-GG-AI/KS-GG-AI) · [Open an issue](https://github.com/KS-GG-AI/KS-GG-AI/issues/new)
