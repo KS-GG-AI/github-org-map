@@ -1,0 +1,15 @@
+{
+  "account": "KS-GG-AI",
+  "orgs": ["AI-GG-AUTO-WORK"],
+  "tokenEnv": {
+    "KS-GG-AI": "USER_READ_TOKEN",
+    "AI-GG-AUTO-WORK": "ORG_READ_TOKEN"
+  },
+  "timezone": "Asia/Seoul",
+  "gif": {
+    "frameMs": 900,
+    "lastFrameMs": 2500,
+    "maxFrames": 60
+  },
+  "publicExcludeHashes": ["634dfd"]
+}
