@@ -94,12 +94,21 @@ export function resolveVariant(
  * fetching/rendering/writing happens so nothing partial is ever produced
  * when the salt is missing.
  */
-function resolveMaskSalt(): string {
-  const salt = process.env.MASK_SALT;
+export function resolveMaskSalt(env: NodeJS.ProcessEnv = process.env): string {
+  const salt = env.MASK_SALT;
   if (!salt || salt.trim() === '') {
     throw new Error(
       'MASK_SALT environment variable is required to generate the org map. ' +
         'Set MASK_SALT before running "npm run generate" (see README.md).'
+    );
+  }
+  // A byte-order mark, newline or stray space silently changes every label
+  // and breaks publicExcludeHashes, so an excluded repo would reappear as a
+  // masked row. Refuse anything but printable ASCII instead.
+  if (!/^[\x21-\x7e]+$/.test(salt)) {
+    throw new Error(
+      'MASK_SALT contains whitespace, a byte-order mark or a non-printable character. ' +
+        'Re-set the MASK_SALT secret with the value only.'
     );
   }
   return salt;
