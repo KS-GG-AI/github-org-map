@@ -4,7 +4,7 @@
   <img src="../assets/banner.svg" alt="GitHub Organization Map &amp; Cartography" width="100%" />
 </p>
 
-# github-org-map-public
+# github-org-map
 
 <p>
   <strong>Pemetaan topologi harian repositori KS-GG-AI otomatis dengan penyembunyian privasi SHA-256 tanpa pengetahuan</strong>
@@ -16,7 +16,7 @@
 </p>
 
 <p>
-  <a href="https://github.com/KS-GG-AI/github-org-map-public/releases"><img src="https://img.shields.io/badge/Release-v1.0.0-A78BFA?style=flat-square&logo=github&labelColor=161126" alt="Release" /></a>
+  <a href="https://github.com/KS-GG-AI/github-org-map/releases"><img src="https://img.shields.io/badge/Release-v1.0.0-A78BFA?style=flat-square&logo=github&labelColor=161126" alt="Release" /></a>
   <a href="../../LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square&labelColor=161126" alt="License: MIT" /></a>
   <img src="https://img.shields.io/badge/TypeScript-5.0+-3178C6.svg?style=flat-square&logo=typescript&logoColor=white&labelColor=161126" alt="TypeScript" />
   <img src="https://img.shields.io/badge/Privacy-Zero--Knowledge%20SHA--256-F43F5E.svg?style=flat-square&labelColor=161126" alt="Privacy: SHA-256" />
@@ -31,41 +31,90 @@
 
 ---
 
-## Tentang
+<details>
+<summary><h2 style="display:inline-block; margin:0;">Tentang</h2></summary>
 
 Peta repositori milik akun KS-GG-AI dan organisasi AI-GG-AUTO-WORK yang diperbarui setiap hari. Repositori publik ditampilkan dengan nama aslinya; repositori privat disamarkan dengan hash SHA-256 yang aman. Snapshot harian disimpan di `history/` dan digabungkan menjadi GIF animasi.
 
-## Cara kerja
+</details>
+
+---
+
+<details>
+<summary><h2 style="display:inline-block; margin:0;">Cara kerja</h2></summary>
 
 Repositori ini menghasilkan peta secara mandiri: snapshot SVG hari ini, arsip riwayat, dan GIF animasi yang memperlihatkan evolusi struktur.
 
-## Rahasia yang diperlukan (Secrets)
+</details>
+
+---
+
+<details>
+<summary><h2 style="display:inline-block; margin:0;">Rahasia yang diperlukan (Secrets)</h2></summary>
 
 Memerlukan `USER_READ_TOKEN`, `ORG_READ_TOKEN`, dan `MASK_SALT` untuk isolasi data yang aman.
 
-## Jadwal dan Otomatisasi
+</details>
+
+---
+
+<details>
+<summary><h2 style="display:inline-block; margin:0;">Jadwal dan Otomatisasi</h2></summary>
 
 Berjalan otomatis setiap hari menggunakan alur kerja GitHub Actions dengan dua pekerjaan terpisah.
 
-## Menjalankan secara lokal
+</details>
+
+---
+
+<details>
+<summary><h2 style="display:inline-block; margin:0;">Menjalankan secara lokal</h2></summary>
 
 ```sh
 npm install
 USER_READ_TOKEN=ghp_xxx ORG_READ_TOKEN=ghp_yyy MASK_SALT=<the salt> npm run generate
 ```
 
-## Konfigurasi
+</details>
+
+---
+
+<details>
+<summary><h2 style="display:inline-block; margin:0;">Konfigurasi</h2></summary>
 
 Edit `data/config.json` untuk mengubah akun, organisasi, zona waktu, atau parameter GIF.
 
-## Pengujian
+</details>
+
+---
+
+<details>
+<summary><h2 style="display:inline-block; margin:0;">Pengujian</h2></summary>
 
 ```sh
 npm test
 ```
 
-## Kontak
+</details>
+
+---
+
+<details>
+<summary><h2 style="display:inline-block; margin:0;">Kontak</h2></summary>
 
 Untuk pertanyaan, masukan, atau ide, silakan gunakan tautan resmi di bawah ini.
 
 [GitHub 프로필](https://github.com/KS-GG-AI) · [프로필 저장소](https://github.com/KS-GG-AI/KS-GG-AI) · [이슈 등록](https://github.com/KS-GG-AI/KS-GG-AI/issues/new)
+
+</details>
+
+---
+
+<details>
+<summary><h2 style="display:inline-block; margin:0;">📬 Kontak</h2></summary>
+
+Untuk pekerjaan publik, masukan, atau melihat implementasi lebih dekat, tautan berikut adalah titik awal yang paling jelas.
+
+[Profil GitHub](https://github.com/KS-GG-AI) · [Repositori publik](https://github.com/KS-GG-AI?tab=repositories) · [Buka issue](https://github.com/KS-GG-AI/github-org-map/issues/new) · [Sumber profil](https://github.com/KS-GG-AI/KS-GG-AI)
+
+</details>

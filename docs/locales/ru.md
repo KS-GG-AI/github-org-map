@@ -4,7 +4,7 @@
   <img src="../assets/banner.svg" alt="GitHub Organization Map &amp; Cartography" width="100%" />
 </p>
 
-# github-org-map-public
+# github-org-map
 
 <p>
   <strong>Ежедневное автоматическое картографирование репозиториев KS-GG-AI с маскированием приватности на базе SHA-256 с нулевым разглашением</strong>
@@ -16,7 +16,7 @@
 </p>
 
 <p>
-  <a href="https://github.com/KS-GG-AI/github-org-map-public/releases"><img src="https://img.shields.io/badge/Release-v1.0.0-A78BFA?style=flat-square&logo=github&labelColor=161126" alt="Release" /></a>
+  <a href="https://github.com/KS-GG-AI/github-org-map/releases"><img src="https://img.shields.io/badge/Release-v1.0.0-A78BFA?style=flat-square&logo=github&labelColor=161126" alt="Release" /></a>
   <a href="../../LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square&labelColor=161126" alt="License: MIT" /></a>
   <img src="https://img.shields.io/badge/TypeScript-5.0+-3178C6.svg?style=flat-square&logo=typescript&logoColor=white&labelColor=161126" alt="TypeScript" />
   <img src="https://img.shields.io/badge/Privacy-Zero--Knowledge%20SHA--256-F43F5E.svg?style=flat-square&labelColor=161126" alt="Privacy: SHA-256" />
@@ -31,41 +31,90 @@
 
 ---
 
-## О проекте
+<details>
+<summary><h2 style="display:inline-block; margin:0;">О проекте</h2></summary>
 
 Ежедневно обновляемая карта репозиториев учетной записи KS-GG-AI и организации AI-GG-AUTO-WORK. Публичные репозитории отображаются под своими реальными именами; приватные репозитории маскируются безопасным хешем SHA-256 с солью. Снимки сохраняются в `history/` и объединяются в анимированный GIF.
 
-## Как это работает
+</details>
+
+---
+
+<details>
+<summary><h2 style="display:inline-block; margin:0;">Как это работает</h2></summary>
 
 Репозиторий генерирует карту автоматически: векторный снимок SVG на сегодня, датированный архив истории и анимированный GIF `org-map.gif`.
 
-## Необходимые секреты
+</details>
+
+---
+
+<details>
+<summary><h2 style="display:inline-block; margin:0;">Необходимые секреты</h2></summary>
 
 Для работы требуются `USER_READ_TOKEN`, `ORG_READ_TOKEN` и закрытая соль `MASK_SALT`.
 
-## Расписание и автоматизация
+</details>
+
+---
+
+<details>
+<summary><h2 style="display:inline-block; margin:0;">Расписание и автоматизация</h2></summary>
 
 Рабочий процесс GitHub Actions разделен на два изолированных задания: безопасная генерация и фиксация изменений.
 
-## Локальный запуск
+</details>
+
+---
+
+<details>
+<summary><h2 style="display:inline-block; margin:0;">Локальный запуск</h2></summary>
 
 ```sh
 npm install
 USER_READ_TOKEN=ghp_xxx ORG_READ_TOKEN=ghp_yyy MASK_SALT=<the salt> npm run generate
 ```
 
-## Конфигурация
+</details>
+
+---
+
+<details>
+<summary><h2 style="display:inline-block; margin:0;">Конфигурация</h2></summary>
 
 Редактируйте `data/config.json` для настройки учетных записей, организаций и параметров GIF.
 
-## Тестирование
+</details>
+
+---
+
+<details>
+<summary><h2 style="display:inline-block; margin:0;">Тестирование</h2></summary>
 
 ```sh
 npm test
 ```
 
-## Контакты и обратная связь
+</details>
+
+---
+
+<details>
+<summary><h2 style="display:inline-block; margin:0;">Контакты и обратная связь</h2></summary>
 
 По всем вопросам и предложениям обращайтесь по официальным ссылкам ниже.
 
 [GitHub 프로필](https://github.com/KS-GG-AI) · [프로필 저장소](https://github.com/KS-GG-AI/KS-GG-AI) · [이슈 등록](https://github.com/KS-GG-AI/KS-GG-AI/issues/new)
+
+</details>
+
+---
+
+<details>
+<summary><h2 style="display:inline-block; margin:0;">📬 Контакты</h2></summary>
+
+Для вопросов по публичным проектам, обратной связи или детального ознакомления с реализацией лучше всего использовать эти ссылки.
+
+[Профиль GitHub](https://github.com/KS-GG-AI) · [Публичные репозитории](https://github.com/KS-GG-AI?tab=repositories) · [Создать issue](https://github.com/KS-GG-AI/github-org-map/issues/new) · [Исходный код профиля](https://github.com/KS-GG-AI/KS-GG-AI)
+
+</details>

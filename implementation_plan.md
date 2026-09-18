@@ -1,9 +1,10 @@
-# KS-GG-AI Ecosystem Implementation Plan (Cumulative: v3)
+# KS-GG-AI Ecosystem Implementation Plan (Cumulative: v4)
 
 ## 📜 Version Changelog & Diffs
 - **v1**: KS-GG-AI GitHub Profile Enhancement & v0.4.0 Release (+94, -0)
 - **v2**: adguardhome-homelab-stack Enhancement & v1.0.0 Release (+97, -0)
 - **v3**: github-org-map-public Visuals & 10-Locale Documentation Enhancement (+120, -0)
+- **v4**: Collapsible <details> default state across 2 repos, Profile Contact mapping (10 locales), and Repo naming alignment (+160, -0)
 
 ---
 
@@ -262,3 +263,61 @@ Enhance the official GitHub profile repository ([KS-GG-AI/KS-GG-AI](https://gith
    - `org-map.gif`의 4개 모서리 픽셀이 `#0d1117`로 안전하게 블렌딩되는지 확인.
 4. **Git 커밋 및 GitHub 원격 푸시**:
    - Git 영어 커밋 메시지 작성 후 `origin main`에 푸시.
+
+---
+
+## 🚀 [v4 Specification] Collapsible Details, Profile Contact Mapping & Repo Naming Alignment
+
+### 1. Requirements & Objectives
+1. **Collapsible Section Architecture (`<details>` / `<summary>`)**:
+   - 대상 저장소: `adguardhome-homelab-stack` 및 `github-org-map-public`.
+   - 상단 히어로 영역(배너, 배지, 언어 네비게이터, 실시간 렌더링 GIF/SVG)은 상시 노출하여 첫인상과 시각적 완결성을 유지.
+   - 본문의 모든 주요 섹션(Architecture, Specifications, Usage Scenarios, Performance, Directory, Quick Start, Security, License, About, How it works, Secrets, Schedule, Config 등)을 `<details>` 태그로 래핑.
+   - **기본값으로 접기(Default Collapsed)**: `open` 속성을 생략하여 진입 시 군더더기 없이 깔끔하게 접힌 상태 유지. 사용자가 클릭 시 부드럽게 펼쳐지도록 구성.
+   - 영문 `README.md` 뿐만 아니라 **10개 언어 전체 문서**(`locales/*.md` 및 `docs/locales/*.md`)에 100% 동일하게 일괄 적용.
+2. **프로필 기반 Contact 매핑 자동화**:
+   - `KS-GG-AI` 메인 프로필의 Contact 섹션을 기반으로 두 저장소의 성격에 맞춰 자동 매핑 및 연동.
+   - 프로필의 다국어 번역본(`profile/content/locales/`)과 100% 일치하는 10개 언어별 `## Contact` / `## 연락` / `## 联系` / `## Contacto` / `## संपर्क` / `## للتواصل` / `## Contato` / `## Контакты` / `## Contact` / `## Kontak` 텍스트 적용.
+   - 링크 매핑: `[GitHub Profile](https://github.com/KS-GG-AI)` · `[Public Repositories](https://github.com/KS-GG-AI?tab=repositories)` · `[Open an Issue](https://github.com/KS-GG-AI/<repo>/issues/new)` · `[Profile Source](https://github.com/KS-GG-AI/KS-GG-AI)`.
+   - Contact 섹션 역시 `<details>`로 래핑하여 통일된 UX 제공.
+3. **저장소 이름 개선안 (Repo Naming Optimization)**:
+   - 두 저장소의 명칭을 보다 직관적이고 현대적이며 전문적인 GitHub 표준 네이밍으로 고도화 제안.
+   - `adguardhome-homelab-stack` 개선안:
+     - 1안: `adguard-homelab` (권장: 불필요한 음절 축소, 핵심 홈랩 어플라이언스 정체성 강조)
+     - 2안: `adguardhome-appliance` (강화된 독립 어플라이언스/하드웨어 성격 강조)
+     - 3안: `homelab-dns-shield` (네트워크 보안/DNS 쉴드 역할 강조)
+     - 4안: 기존 이름 유지 (`adguardhome-homelab-stack`)
+   - `github-org-map-public` 개선안 (참고: 현재 `KS-GG-AI/github-org-map`이 비공개 원본 저장소로 기존재):
+     - 1안: `org-cartographer` (권장: `-public` 접미사의 임시적인 느낌을 벗어나 자동화 지도 제작 엔진으로서의 전문성 부여)
+     - 2안: `org-map-telemetry` (SHA-256 프라이버시 마스킹 및 데일리 텔레메트리 맵 강조)
+     - 3안: `github-map-public` (간소화)
+     - 4안: 기존 이름 유지 (`github-org-map-public`)
+
+---
+
+### 2. Proposed Changes
+
+#### 1) `adguardhome-homelab-stack`
+- [MODIFY] `README.md`: 모든 본문 섹션 `<details>` 래핑 및 Contact 섹션 신설.
+- [MODIFY] `locales/ko.md`: 한국어 본문 섹션 `<details>` 래핑 및 '연락' 섹션 매핑.
+- [MODIFY] `locales/*.md` (zh-CN, es, hi, ar, pt-BR, ru, fr, id): 8개 언어 전수 동일 적용.
+
+#### 2) `github-org-map-public`
+- [MODIFY] `README.md`: 모든 본문 섹션 `<details>` 래핑 및 Contact 섹션 최적화.
+- [MODIFY] `docs/locales/ko.md`: 한국어 본문 섹션 `<details>` 래핑 및 '연락' 섹션 매핑.
+- [MODIFY] `docs/locales/*.md` (zh-CN, es, hi, ar, pt-BR, ru, fr, id): 8개 언어 전수 동일 적용.
+
+#### 3) `KS-GG-AI` (이름 변경 시 연동)
+- [MODIFY] `README.md` & `profile/content/locales/*.md`: 레포지토리 이름 변경 확정 시 쇼케이스 및 프로젝트 링크 일괄 동기화.
+
+---
+
+### 3. Verification Plan
+1. **마크다운 구문 및 HTML 태그 정합성 검증**:
+   - `<details>` 및 `</details>` 짝 일치, `<summary>` 내 인라인 제목 스타일 정상 렌더링 확인.
+2. **10개 언어 패리티 및 상대경로 검증**:
+   - 모든 언어 파일에서 링크 깨짐 및 이미지 렌더링 정상 여부 검증.
+3. **테스트 스위트 검증**:
+   - `github-org-map-public`에서 `npm test` 통과 확인.
+4. **Git 동기화**:
+   - 작업 완료 후 `origin main`에 안전하게 푸시.

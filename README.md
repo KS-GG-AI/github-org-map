@@ -4,7 +4,7 @@
   <img src="docs/assets/banner.svg" alt="GitHub Organization Map &amp; Cartography" width="100%" />
 </p>
 
-# github-org-map-public
+# github-org-map
 
 <p>
   <strong>Automated daily cartography and topology mapping of KS-GG-AI repositories with zero-knowledge SHA-256 privacy masking.</strong>
@@ -24,7 +24,7 @@
 </p>
 
 <p>
-  <a href="https://github.com/KS-GG-AI/github-org-map-public/releases"><img src="https://img.shields.io/badge/Release-v1.0.0-A78BFA?style=flat-square&logo=github&labelColor=161126" alt="Release" /></a>
+  <a href="https://github.com/KS-GG-AI/github-org-map/releases"><img src="https://img.shields.io/badge/Release-v1.0.0-A78BFA?style=flat-square&logo=github&labelColor=161126" alt="Release" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square&labelColor=161126" alt="License: MIT" /></a>
   <img src="https://img.shields.io/badge/TypeScript-5.0+-3178C6.svg?style=flat-square&logo=typescript&logoColor=white&labelColor=161126" alt="TypeScript" />
   <img src="https://img.shields.io/badge/Privacy-Zero--Knowledge%20SHA--256-F43F5E.svg?style=flat-square&labelColor=161126" alt="Privacy: SHA-256" />
@@ -39,11 +39,17 @@
 
 ---
 
-## About
+<details>
+<summary><h2 style="display:inline-block; margin:0;">About</h2></summary>
 
 A daily-refreshed map of the repositories owned by the KS-GG-AI account and the AI-GG-AUTO-WORK organization. Public repositories appear with their real names; private repositories appear only as masked labels, and some are omitted entirely. Each day's snapshot is kept in `history/` and combined into an animated GIF.
 
-## How it works
+</details>
+
+---
+
+<details>
+<summary><h2 style="display:inline-block; margin:0;">How it works</h2></summary>
 
 This repository generates the map itself: an SVG snapshot for "today", a
 dated history of past snapshots, and a GIF assembled from that history so you
@@ -55,7 +61,12 @@ information is already public on GitHub. Some repositories are omitted from
 the map entirely. `org-map.svg`, `org-map.gif`, and `history/<date>.svg` are
 committed to this repository's own root by the workflow below.
 
-## Required secrets
+</details>
+
+---
+
+<details>
+<summary><h2 style="display:inline-block; margin:0;">Required secrets</h2></summary>
 
 A fine-grained personal access token has exactly one resource owner, so one
 token cannot read both the account's own repositories and an organization's
@@ -75,7 +86,12 @@ repositories. The workflow needs three repository secrets:
 Both GitHub tokens are passed to the generator only via the environment,
 never on the command line.
 
-## Schedule
+</details>
+
+---
+
+<details>
+<summary><h2 style="display:inline-block; margin:0;">Schedule</h2></summary>
 
 `.github/workflows/refresh.yml` runs on a daily schedule and on demand via
 `workflow_dispatch`. The workflow is split into two jobs so the credentials
@@ -91,7 +107,12 @@ held by the same job:
   commits/pushes it if anything changed. It never sees any of the secrets
   above.
 
-## Running locally
+</details>
+
+---
+
+<details>
+<summary><h2 style="display:inline-block; margin:0;">Running locally</h2></summary>
 
 ```sh
 npm install
@@ -107,7 +128,12 @@ The generator is written in TypeScript and run directly via
 needed. `npm run typecheck` runs `tsc --noEmit` to type-check the project
 without emitting anything.
 
-## Configuration
+</details>
+
+---
+
+<details>
+<summary><h2 style="display:inline-block; margin:0;">Configuration</h2></summary>
 
 Edit `data/config.json` to change the tracked account, organizations,
 timezone, or GIF timing (`frameMs`, `lastFrameMs`, `maxFrames`).
@@ -117,14 +143,26 @@ the environment variable holding that owner's token, since one fine-grained
 token cannot cover both the account and an org. An owner with no entry here
 falls back to `ORG_READ_TOKEN`, then `GITHUB_TOKEN`.
 
-## Tests
+</details>
+
+---
+
+<details>
+<summary><h2 style="display:inline-block; margin:0;">Tests</h2></summary>
 
 ```sh
 npm test
 ```
 
-## Contact
+</details>
 
-For questions, feedback, or ideas about the map, these are the clearest starting points.
+---
 
-[GitHub profile](https://github.com/KS-GG-AI) · [Profile repository](https://github.com/KS-GG-AI/KS-GG-AI) · [Open an issue](https://github.com/KS-GG-AI/KS-GG-AI/issues/new)
+<details>
+<summary><h2 style="display:inline-block; margin:0;">📬 Contact</h2></summary>
+
+For public work, feedback, or a closer look at the implementation, these are the clearest starting points.
+
+[GitHub profile](https://github.com/KS-GG-AI) · [Public repositories](https://github.com/KS-GG-AI?tab=repositories) · [Open an issue](https://github.com/KS-GG-AI/github-org-map/issues/new) · [Profile source](https://github.com/KS-GG-AI/KS-GG-AI)
+
+</details>

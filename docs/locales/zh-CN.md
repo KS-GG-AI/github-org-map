@@ -4,7 +4,7 @@
   <img src="../assets/banner.svg" alt="GitHub Organization Map &amp; Cartography" width="100%" />
 </p>
 
-# github-org-map-public
+# github-org-map
 
 <p>
   <strong>基于零知识 SHA-256 掩码的 KS-GG-AI 仓库拓扑与组织图谱自动日常生成系统</strong>
@@ -16,7 +16,7 @@
 </p>
 
 <p>
-  <a href="https://github.com/KS-GG-AI/github-org-map-public/releases"><img src="https://img.shields.io/badge/Release-v1.0.0-A78BFA?style=flat-square&logo=github&labelColor=161126" alt="Release" /></a>
+  <a href="https://github.com/KS-GG-AI/github-org-map/releases"><img src="https://img.shields.io/badge/Release-v1.0.0-A78BFA?style=flat-square&logo=github&labelColor=161126" alt="Release" /></a>
   <a href="../../LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square&labelColor=161126" alt="License: MIT" /></a>
   <img src="https://img.shields.io/badge/TypeScript-5.0+-3178C6.svg?style=flat-square&logo=typescript&logoColor=white&labelColor=161126" alt="TypeScript" />
   <img src="https://img.shields.io/badge/Privacy-Zero--Knowledge%20SHA--256-F43F5E.svg?style=flat-square&labelColor=161126" alt="Privacy: SHA-256" />
@@ -31,11 +31,17 @@
 
 ---
 
-## 关于项目
+<details>
+<summary><h2 style="display:inline-block; margin:0;">关于项目</h2></summary>
 
 本项目每日定时自动生成 KS-GG-AI 账户和 AI-GG-AUTO-WORK 组织所拥有的存储库图谱。公开仓库显示其实际名称；私有仓库仅显示为经过盐化 SHA-256 哈希处理的安全掩码标签，部分内部仓库会被完全排除。每日快照保存在 `history/` 中，并合成动图 GIF 直观展示随时间推移的架构演变。
 
-## 工作原理
+</details>
+
+---
+
+<details>
+<summary><h2 style="display:inline-block; margin:0;">工作原理</h2></summary>
 
 本仓库每日自动完成组织图谱的测绘与生成：
 - **今日 SVG 快照**：反映账户与组织最新状态的暗色机架风格矢量图。
@@ -44,7 +50,12 @@
 
 私有仓库的名称均由不可逆的安全掩码替换，公开仓库则保留原始名称。配置中指定的排除项不会在图谱中出现。
 
-## 所需密钥配置
+</details>
+
+---
+
+<details>
+<summary><h2 style="display:inline-block; margin:0;">所需密钥配置</h2></summary>
 
 细粒度个人访问令牌（Fine-Grained PAT）仅能绑定单一资源所有者，单个令牌无法跨账户和组织同时读取。因此工作流需要以下 3 个密钥：
 
@@ -52,32 +63,59 @@
 - `ORG_READ_TOKEN`：资源所有者设置为被追踪组织，拥有相同的访问与只读权限。
 - `MASK_SALT`：用于掩码哈希加盐的私有随机字符串。必填项，缺失时自动失败终止（Fail-closed）。
 
-## 定时任务与工作流调度
+</details>
+
+---
+
+<details>
+<summary><h2 style="display:inline-block; margin:0;">定时任务与工作流调度</h2></summary>
 
 `.github/workflows/refresh.yml` 每天按计划自动运行，亦支持手动触发。为确保凭据安全，工作流严格拆分为两个独立的作业（Job）：
 
 - **`generate`**：读取 GitHub 数据、运行测试、渲染今日 SVG、归档历史并生成 GIF，最后上传产物。无代码推送权限。
 - **`commit`**：下载构建产物，并在有变动时提交并推送到本仓库。完全不接触任何上游访问令牌。
 
-## 本地运行方式
+</details>
+
+---
+
+<details>
+<summary><h2 style="display:inline-block; margin:0;">本地运行方式</h2></summary>
 
 ```sh
 npm install
 USER_READ_TOKEN=ghp_xxx ORG_READ_TOKEN=ghp_yyy MASK_SALT=<the salt> npm run generate
 ```
 
-## 配置说明
+</details>
+
+---
+
+<details>
+<summary><h2 style="display:inline-block; margin:0;">配置说明</h2></summary>
 
 编辑 `data/config.json` 可修改跟踪的账户、组织、时区以及 GIF 帧率参数（`frameMs`, `lastFrameMs`, `maxFrames`）。
 
-## 测试执行
+</details>
+
+---
+
+<details>
+<summary><h2 style="display:inline-block; margin:0;">测试执行</h2></summary>
 
 ```sh
 npm test
 ```
 
-## 联系与反馈
+</details>
 
-如对组织图谱有任何疑问、改进建议或想法，欢迎通过以下渠道联系交流。
+---
 
-[GitHub 프로필](https://github.com/KS-GG-AI) · [프로필 저장소](https://github.com/KS-GG-AI/KS-GG-AI) · [이슈 등록](https://github.com/KS-GG-AI/KS-GG-AI/issues/new)
+<details>
+<summary><h2 style="display:inline-block; margin:0;">📬 联系</h2></summary>
+
+对于公开工作、反馈或深入了解实现细节，这些是最直接的入口。
+
+[GitHub 个人主页](https://github.com/KS-GG-AI) · [公开仓库](https://github.com/KS-GG-AI?tab=repositories) · [提交 Issue](https://github.com/KS-GG-AI/github-org-map/issues/new) · [个人主页源码](https://github.com/KS-GG-AI/KS-GG-AI)
+
+</details>

@@ -4,7 +4,7 @@
   <img src="../assets/banner.svg" alt="GitHub Organization Map &amp; Cartography" width="100%" />
 </p>
 
-# github-org-map-public
+# github-org-map
 
 <p>
   <strong>Mapeo y cartografía topológica diaria de repositorios KS-GG-AI con preservación de privacidad SHA-256 de conocimiento cero</strong>
@@ -16,7 +16,7 @@
 </p>
 
 <p>
-  <a href="https://github.com/KS-GG-AI/github-org-map-public/releases"><img src="https://img.shields.io/badge/Release-v1.0.0-A78BFA?style=flat-square&logo=github&labelColor=161126" alt="Release" /></a>
+  <a href="https://github.com/KS-GG-AI/github-org-map/releases"><img src="https://img.shields.io/badge/Release-v1.0.0-A78BFA?style=flat-square&logo=github&labelColor=161126" alt="Release" /></a>
   <a href="../../LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square&labelColor=161126" alt="License: MIT" /></a>
   <img src="https://img.shields.io/badge/TypeScript-5.0+-3178C6.svg?style=flat-square&logo=typescript&logoColor=white&labelColor=161126" alt="TypeScript" />
   <img src="https://img.shields.io/badge/Privacy-Zero--Knowledge%20SHA--256-F43F5E.svg?style=flat-square&labelColor=161126" alt="Privacy: SHA-256" />
@@ -31,47 +31,85 @@
 
 ---
 
-## Acerca de
+<details>
+<summary><h2 style="display:inline-block; margin:0;">Acerca de</h2></summary>
 
 Un mapa actualizado diariamente de los repositorios pertenecientes a la cuenta KS-GG-AI y a la organización AI-GG-AUTO-WORK. Los repositorios públicos se muestran con sus nombres reales; los repositorios privados aparecen enmascarados mediante hash SHA-256 con sal, y algunos repositorios internos se omiten por completo. Cada instantánea se archiva en `history/` y se compila en un GIF animado.
 
-## Cómo funciona
+</details>
+
+---
+
+<details>
+<summary><h2 style="display:inline-block; margin:0;">Cómo funciona</h2></summary>
 
 Este repositorio genera el mapa automáticamente cada día:
 - **Instantánea SVG de hoy**: Diagrama vectorial con estilo chasis oscuro de alto rendimiento.
 - **Historial fechado**: Archivo cronológico guardado en `history/<date>.svg`.
 - **Línea de tiempo GIF animada**: Compilación secuencial `org-map.gif` que muestra la evolución histórica.
 
-## Secretos requeridos
+</details>
+
+---
+
+<details>
+<summary><h2 style="display:inline-block; margin:0;">Secretos requeridos</h2></summary>
 
 Un token de acceso personal de grano fino está restringido a un único propietario, por lo que se requieren tres secretos:
 - `USER_READ_TOKEN`: Acceso a la cuenta personal (Metadatos de solo lectura).
 - `ORG_READ_TOKEN`: Acceso a la organización rastreada.
 - `MASK_SALT`: Cadena aleatoria secreta para salar los hashes de enmascaramiento.
 
-## Programación del flujo de trabajo
+</details>
+
+---
+
+<details>
+<summary><h2 style="display:inline-block; margin:0;">Programación del flujo de trabajo</h2></summary>
 
 `.github/workflows/refresh.yml` se ejecuta diariamente y bajo demanda mediante `workflow_dispatch`, dividido en dos trabajos aislados: generación segura y confirmación sin secretos.
 
-## Ejecución local
+</details>
+
+---
+
+<details>
+<summary><h2 style="display:inline-block; margin:0;">Ejecución local</h2></summary>
 
 ```sh
 npm install
 USER_READ_TOKEN=ghp_xxx ORG_READ_TOKEN=ghp_yyy MASK_SALT=<the salt> npm run generate
 ```
 
-## Configuración
+</details>
+
+---
+
+<details>
+<summary><h2 style="display:inline-block; margin:0;">Configuración</h2></summary>
 
 Modifique `data/config.json` para cambiar cuentas, organizaciones, zonas horarias o parámetros de animación GIF.
 
-## Pruebas
+</details>
+
+---
+
+<details>
+<summary><h2 style="display:inline-block; margin:0;">Pruebas</h2></summary>
 
 ```sh
 npm test
 ```
 
-## Contacto
+</details>
 
-Para preguntas, sugerencias o comentarios, utilice los siguientes enlaces oficiales.
+---
 
-[GitHub 프로필](https://github.com/KS-GG-AI) · [프로필 저장소](https://github.com/KS-GG-AI/KS-GG-AI) · [이슈 등록](https://github.com/KS-GG-AI/KS-GG-AI/issues/new)
+<details>
+<summary><h2 style="display:inline-block; margin:0;">📬 Contacto</h2></summary>
+
+Para trabajo público, comentarios o un vistazo más de cerca a la implementación, estos son los puntos de partida más claros.
+
+[Perfil de GitHub](https://github.com/KS-GG-AI) · [Repositorios públicos](https://github.com/KS-GG-AI?tab=repositories) · [Abrir una incidencia](https://github.com/KS-GG-AI/github-org-map/issues/new) · [Fuente del perfil](https://github.com/KS-GG-AI/KS-GG-AI)
+
+</details>

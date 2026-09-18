@@ -4,7 +4,7 @@
   <img src="../assets/banner.svg" alt="GitHub Organization Map &amp; Cartography" width="100%" />
 </p>
 
-# github-org-map-public
+# github-org-map
 
 <p>
   <strong>Cartographie quotidienne automatisée des dépôts KS-GG-AI avec masquage de confidentialité SHA-256 à divulgation nulle de connaissance</strong>
@@ -16,7 +16,7 @@
 </p>
 
 <p>
-  <a href="https://github.com/KS-GG-AI/github-org-map-public/releases"><img src="https://img.shields.io/badge/Release-v1.0.0-A78BFA?style=flat-square&logo=github&labelColor=161126" alt="Release" /></a>
+  <a href="https://github.com/KS-GG-AI/github-org-map/releases"><img src="https://img.shields.io/badge/Release-v1.0.0-A78BFA?style=flat-square&logo=github&labelColor=161126" alt="Release" /></a>
   <a href="../../LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square&labelColor=161126" alt="License: MIT" /></a>
   <img src="https://img.shields.io/badge/TypeScript-5.0+-3178C6.svg?style=flat-square&logo=typescript&logoColor=white&labelColor=161126" alt="TypeScript" />
   <img src="https://img.shields.io/badge/Privacy-Zero--Knowledge%20SHA--256-F43F5E.svg?style=flat-square&labelColor=161126" alt="Privacy: SHA-256" />
@@ -31,41 +31,79 @@
 
 ---
 
-## À propos
+<details>
+<summary><h2 style="display:inline-block; margin:0;">À propos</h2></summary>
 
 Une carte actualisée quotidiennement des dépôts appartenant au compte KS-GG-AI et à l'organisation AI-GG-AUTO-WORK. Les dépôts publics apparaissent sous leurs vrais noms ; les dépôts privés sont masqués avec un hachage SHA-256 salé sécurisé. Les instantanés sont archivés dans `history/` et assemblés dans un GIF animé.
 
-## Fonctionnement
+</details>
+
+---
+
+<details>
+<summary><h2 style="display:inline-block; margin:0;">Fonctionnement</h2></summary>
 
 Ce dépôt produit automatiquement la carte : instantané SVG du jour, historique archivé et GIF animé dynamique.
 
-## Secrets requis
+</details>
+
+---
+
+<details>
+<summary><h2 style="display:inline-block; margin:0;">Secrets requis</h2></summary>
 
 Configuration sécurisée avec `USER_READ_TOKEN`, `ORG_READ_TOKEN` et `MASK_SALT`.
 
-## Planification du flux de travail
+</details>
+
+---
+
+<details>
+<summary><h2 style="display:inline-block; margin:0;">Planification du flux de travail</h2></summary>
 
 Exécution quotidienne avec séparation stricte des privilèges entre la génération et la publication.
 
-## Exécution locale
+</details>
+
+---
+
+<details>
+<summary><h2 style="display:inline-block; margin:0;">Exécution locale</h2></summary>
 
 ```sh
 npm install
 USER_READ_TOKEN=ghp_xxx ORG_READ_TOKEN=ghp_yyy MASK_SALT=<the salt> npm run generate
 ```
 
-## Configuration
+</details>
+
+---
+
+<details>
+<summary><h2 style="display:inline-block; margin:0;">Configuration</h2></summary>
 
 Modifiez `data/config.json` pour ajuster les comptes suivis, le fuseau horaire et les paramètres du GIF.
 
-## Tests
+</details>
+
+---
+
+<details>
+<summary><h2 style="display:inline-block; margin:0;">Tests</h2></summary>
 
 ```sh
 npm test
 ```
 
-## Contact
+</details>
 
-Pour toute question ou suggestion, veuillez utiliser les liens ci-dessous.
+---
 
-[GitHub 프로필](https://github.com/KS-GG-AI) · [프로필 저장소](https://github.com/KS-GG-AI/KS-GG-AI) · [이슈 등록](https://github.com/KS-GG-AI/KS-GG-AI/issues/new)
+<details>
+<summary><h2 style="display:inline-block; margin:0;">📬 Contact</h2></summary>
+
+Pour les travaux publics, les retours ou un examen plus approfondi de l'implémentation, voici les points d'entrée les plus clairs.
+
+[Profil GitHub](https://github.com/KS-GG-AI) · [Dépôts publics](https://github.com/KS-GG-AI?tab=repositories) · [Ouvrir un ticket](https://github.com/KS-GG-AI/github-org-map/issues/new) · [Source du profil](https://github.com/KS-GG-AI/KS-GG-AI)
+
+</details>

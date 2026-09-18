@@ -4,7 +4,7 @@
   <img src="../assets/banner.svg" alt="GitHub Organization Map &amp; Cartography" width="100%" />
 </p>
 
-# github-org-map-public
+# github-org-map
 
 <p>
   <strong>تخطيط طوبولوجي يومي مؤتمت لمستودعات KS-GG-AI مع إخفاء أمني قائم على تشفير SHA-256 خالي من المعرفة</strong>
@@ -16,7 +16,7 @@
 </p>
 
 <p>
-  <a href="https://github.com/KS-GG-AI/github-org-map-public/releases"><img src="https://img.shields.io/badge/Release-v1.0.0-A78BFA?style=flat-square&logo=github&labelColor=161126" alt="Release" /></a>
+  <a href="https://github.com/KS-GG-AI/github-org-map/releases"><img src="https://img.shields.io/badge/Release-v1.0.0-A78BFA?style=flat-square&logo=github&labelColor=161126" alt="Release" /></a>
   <a href="../../LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square&labelColor=161126" alt="License: MIT" /></a>
   <img src="https://img.shields.io/badge/TypeScript-5.0+-3178C6.svg?style=flat-square&logo=typescript&logoColor=white&labelColor=161126" alt="TypeScript" />
   <img src="https://img.shields.io/badge/Privacy-Zero--Knowledge%20SHA--256-F43F5E.svg?style=flat-square&labelColor=161126" alt="Privacy: SHA-256" />
@@ -31,41 +31,90 @@
 
 ---
 
-## حول المشروع
+<details>
+<summary><h2 style="display:inline-block; margin:0;">حول المشروع</h2></summary>
 
 خريطة محدثة يوميًا للمستودعات التابعة لحساب KS-GG-AI ومنظمة AI-GG-AUTO-WORK. تظهر المستودعات العامة بأسمائها الحقيقية؛ بينما تظهر المستودعات الخاصة كتسميات مقنعة بأمان، ويتم حفظ السجل في `history/` ودمجه في صورة GIF متحركة.
 
-## آلية العمل
+</details>
+
+---
+
+<details>
+<summary><h2 style="display:inline-block; margin:0;">آلية العمل</h2></summary>
 
 يقوم هذا المستودع بإنشاء الخريطة تلقائيًا: لقطة SVG لليوم، وسجل تاريخي مؤرخ، وصورة GIF متحركة تعرض تطور البنية مع الوقت.
 
-## الأسرار المطلوبة (Secrets)
+</details>
+
+---
+
+<details>
+<summary><h2 style="display:inline-block; margin:0;">الأسرار المطلوبة (Secrets)</h2></summary>
 
 يتطلب سير العمل 3 أسرار: `USER_READ_TOKEN` و `ORG_READ_TOKEN` و `MASK_SALT`.
 
-## الجدول الزمني ومسار العمل
+</details>
+
+---
+
+<details>
+<summary><h2 style="display:inline-block; margin:0;">الجدول الزمني ومسار العمل</h2></summary>
 
 يعمل `.github/workflows/refresh.yml` وفق جدول يومي دقيق مع فصل كامل بين صلاحيات القراءة والدفع.
 
-## التشغيل المحلي
+</details>
+
+---
+
+<details>
+<summary><h2 style="display:inline-block; margin:0;">التشغيل المحلي</h2></summary>
 
 ```sh
 npm install
 USER_READ_TOKEN=ghp_xxx ORG_READ_TOKEN=ghp_yyy MASK_SALT=<the salt> npm run generate
 ```
 
-## الإعدادات
+</details>
+
+---
+
+<details>
+<summary><h2 style="display:inline-block; margin:0;">الإعدادات</h2></summary>
 
 قم بتعديل `data/config.json` لتخصيص الحسابات والمنظمات والمنطقة الزمنية ومعدل إطارات GIF.
 
-## الاختبارات
+</details>
+
+---
+
+<details>
+<summary><h2 style="display:inline-block; margin:0;">الاختبارات</h2></summary>
 
 ```sh
 npm test
 ```
 
-## التواصل والدعم
+</details>
+
+---
+
+<details>
+<summary><h2 style="display:inline-block; margin:0;">التواصل والدعم</h2></summary>
 
 لأي استفسارات أو ملاحظات، يُرجى استخدام الروابط الرسمية أدناه.
 
 [GitHub 프로필](https://github.com/KS-GG-AI) · [프로필 저장소](https://github.com/KS-GG-AI/KS-GG-AI) · [이슈 등록](https://github.com/KS-GG-AI/KS-GG-AI/issues/new)
+
+</details>
+
+---
+
+<details>
+<summary><h2 style="display:inline-block; margin:0;">📬 للتواصل</h2></summary>
+
+للعمل العام، الملاحظات، أو إلقاء نظرة فاحصة على التنفيذ، هذه هي أوضح نقاط البداية.
+
+[الملف الشخصي على GitHub](https://github.com/KS-GG-AI) · [المستودعات العامة](https://github.com/KS-GG-AI?tab=repositories) · [فتح مشكلة](https://github.com/KS-GG-AI/github-org-map/issues/new) · [مصدر الملف الشخصي](https://github.com/KS-GG-AI/KS-GG-AI)
+
+</details>
