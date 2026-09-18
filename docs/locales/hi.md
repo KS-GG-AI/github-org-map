@@ -1,7 +1,7 @@
 <div align="center">
 
 <p>
-  <img src="../assets/banner.svg" alt="GitHub Organization Map &amp; Cartography" width="100%" />
+  <img src="../assets/locales/hi/banner.svg" alt="GitHub Organization Map &amp; Cartography" width="100%" />
 </p>
 
 # github-org-map
@@ -24,7 +24,7 @@
 </p>
 
 <p align="center">
-  <img src="../../org-map.svg" alt="GitHub Organization Map" width="100%" />
+  <img src="../assets/locales/hi/org-map.svg" alt="GitHub Organization Map" width="100%" />
 </p>
 
 </div>

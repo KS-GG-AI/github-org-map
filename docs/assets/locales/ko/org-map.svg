@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 864 526" width="864" height="526" role="img" aria-label="GitHub organization map for KS-GG-AI on 2026-09-14">
+  <defs>
+    <!-- Dark Homelab Canvas Gradient -->
+    <linearGradient id="canvas-bg" x1="0" y1="0" x2="864" y2="526" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#070a14"/>
+      <stop offset="50%" stop-color="#0c1120"/>
+      <stop offset="100%" stop-color="#080c18"/>
+    </linearGradient>
+
+    <!-- Subtle Grid Pattern -->
+    <pattern id="ui-grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#1e293b" stroke-width="0.6" stroke-opacity="0.25"/>
+    </pattern>
+
+    <!-- Glow Filter for LEDs and Active Dots -->
+    <filter id="badge-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Base Dashboard Canvas (GitHub Dark #0d1117 background base eliminates corner notches) -->
+  <rect width="864" height="526" fill="#0d1117"/>
+  <rect x="1" y="1" width="862" height="524" rx="14" fill="url(#canvas-bg)" stroke="#1e293b" stroke-width="1.2"/>
+  <rect x="1" y="1" width="862" height="524" rx="14" fill="url(#ui-grid)"/>
+
+  <!-- Top Status & Navigation Bar -->
+  <g transform="translate(28, 28)">
+    <rect width="808" height="52" rx="8" fill="#0d1424" stroke="#1e2c45" stroke-width="1"/>
+    
+    <!-- Active Status Pulse LED -->
+    <rect x="10" y="10" width="32" height="32" rx="6" fill="#064e3b" stroke="#34d399" stroke-width="1"/>
+    <circle cx="26" cy="26" r="4.5" fill="#34d399" filter="url(#badge-glow)"/>
+
+    <!-- Title & Date -->
+    <text x="52" y="24" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="700">GitHub 조직 및 계정 맵 — KS-GG-AI</text>
+    <text x="52" y="40" fill="#7dd3fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600">스냅샷: 2026-09-14 · 일일 텔레메트리</text>
+
+    
+      <!-- Metric Chip 1: Public -->
+      <g transform="translate(327, 12)">
+        <rect width="86" height="28" rx="6" fill="#092319" stroke="#065f46" stroke-width="1"/>
+        <circle cx="12" cy="14" r="3.5" fill="#34d399"/>
+        <text x="22" y="18" fill="#6ee7b7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700">공개 2개</text>
+      </g>
+      <!-- Metric Chip 2: Private -->
+      <g transform="translate(423, 12)">
+        <rect width="92" height="28" rx="6" fill="#240d16" stroke="#881337" stroke-width="1"/>
+        <circle cx="12" cy="14" r="3.5" fill="#f43f5e"/>
+        <text x="22" y="18" fill="#fda4af" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="700">마스킹 10개</text>
+      </g>
+      <!-- Metric Chip 3: Languages -->
+      <g transform="translate(525, 12)">
+        <rect width="271" height="28" rx="6" fill="#0d1527" stroke="#1d2f4d" stroke-width="1"/>
+        <text x="12" y="18" fill="#93c5fd" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600">주요 언어: TypeScript 1 · JavaScript 1</text>
+      </g>
+  </g>
+
+  <!-- Group Cards Container -->
+  
+    <!-- Group Card: KS-GG-AI -->
+    <g>
+      <!-- Card Chassis Container -->
+      <rect x="28" y="104" width="392" height="138" rx="12" fill="#0c1220" stroke="#1e2c45" stroke-width="1.2"/>
+      
+      <!-- Card Header Strip -->
+      <path d="M 28 116 C 28 109.37 33.37 104 40 104 L 408 104 C 414.63 104 420 109.37 420 116 L 420 148 L 28 148 Z" fill="#111a2e" stroke="#1e2c45" stroke-width="1"/>
+      <line x1="28" y1="148" x2="420" y2="148" stroke="#1e2c45" stroke-width="1"/>
+
+      <!-- Account User Icon -->
+       <g transform="translate(42, 118)">
+         <circle cx="9" cy="6" r="4.5" fill="#38bdf8"/>
+         <path d="M 2 17 C 2 13 6 11 9 11 C 12 11 16 13 16 17 Z" fill="#38bdf8"/>
+       </g>
+      
+      <!-- Group Title -->
+      <text x="68" y="131" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="800">KS-GG-AI</text>
+
+      <!-- Group Meta Badge -->
+      <rect x="267" y="114" width="139" height="24" rx="5" fill="#0d1424" stroke="#1e2c45" stroke-width="0.8"/>
+      <text x="336.5" y="130" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600" text-anchor="middle">Account · 2 repos</text>
+
+      
+        <!-- Public Repo Row -->
+        <rect x="44" y="166" width="360" height="26" rx="5" fill="#080d18" stroke="#151f33" stroke-width="0.8"/>
+        <circle cx="58" cy="179" r="4.5" fill="none" stroke="#34d399" stroke-width="1.8"/>
+        <circle cx="58" cy="179" r="1.5" fill="#34d399"/>
+        <text x="70" y="183" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="600">KS-GG-AI</text>
+        <rect x="348" y="171" width="48" height="16" rx="3" fill="#064e3b" stroke="#059669" stroke-width="0.8"/>
+        <text x="372" y="182.5" fill="#6ee7b7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="8.5" font-weight="700" text-anchor="middle">PUBLIC</text>
+
+        <!-- Public Repo Row -->
+        <rect x="44" y="196" width="360" height="26" rx="5" fill="#080d18" stroke="#151f33" stroke-width="0.8"/>
+        <circle cx="58" cy="209" r="4.5" fill="none" stroke="#34d399" stroke-width="1.8"/>
+        <circle cx="58" cy="209" r="1.5" fill="#34d399"/>
+        <text x="70" y="213" fill="#38bdf8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="12.5" font-weight="600">github-org-map</text>
+        <rect x="348" y="201" width="48" height="16" rx="3" fill="#064e3b" stroke="#059669" stroke-width="0.8"/>
+        <text x="372" y="212.5" fill="#6ee7b7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="8.5" font-weight="700" text-anchor="middle">PUBLIC</text>
+    </g>
+
+    <!-- Group Card: AI-GG-AUTO-WORK -->
+    <g>
+      <!-- Card Chassis Container -->
+      <rect x="444" y="104" width="392" height="378" rx="12" fill="#0c1220" stroke="#1e2c45" stroke-width="1.2"/>
+      
+      <!-- Card Header Strip -->
+      <path d="M 444 116 C 444 109.37 449.37 104 456 104 L 824 104 C 830.63 104 836 109.37 836 116 L 836 148 L 444 148 Z" fill="#111a2e" stroke="#1e2c45" stroke-width="1"/>
+      <line x1="444" y1="148" x2="836" y2="148" stroke="#1e2c45" stroke-width="1"/>
+
+      <!-- Organization Building/Network Icon -->
+       <g transform="translate(458, 117)">
+         <rect x="2" y="2" width="14" height="15" rx="2" fill="none" stroke="#c084fc" stroke-width="1.5"/>
+         <rect x="5" y="5" width="2.5" height="2.5" fill="#e9d5ff"/>
+         <rect x="10.5" y="5" width="2.5" height="2.5" fill="#e9d5ff"/>
+         <rect x="5" y="10" width="2.5" height="2.5" fill="#e9d5ff"/>
+         <rect x="10.5" y="10" width="2.5" height="2.5" fill="#e9d5ff"/>
+       </g>
+      
+      <!-- Group Title -->
+      <text x="484" y="131" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14" font-weight="800">AI-GG-AUTO-WORK</text>
+
+      <!-- Group Meta Badge -->
+      <rect x="641" y="114" width="181" height="24" rx="5" fill="#0d1424" stroke="#1e2c45" stroke-width="0.8"/>
+      <text x="731.5" y="130" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="10.5" font-weight="600" text-anchor="middle">조직 · 10개 저장소</text>
+
+      
+        <!-- Private Repo Row -->
+        <rect x="460" y="166" width="360" height="26" rx="5" fill="#080d18" stroke="#151f33" stroke-width="0.8"/>
+        <circle cx="474" cy="179" r="4" fill="#f43f5e" filter="url(#badge-glow)"/>
+        <text x="486" y="183" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="12" letter-spacing="0.5">······135604</text>
+        <rect x="762" y="171" width="50" height="16" rx="3" fill="#240d16" stroke="#881337" stroke-width="0.8"/>
+        <text x="787" y="182.5" fill="#fda4af" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="8.5" font-weight="700" text-anchor="middle">MASKED</text>
+
+        <!-- Private Repo Row -->
+        <rect x="460" y="196" width="360" height="26" rx="5" fill="#080d18" stroke="#151f33" stroke-width="0.8"/>
+        <circle cx="474" cy="209" r="4" fill="#f43f5e" filter="url(#badge-glow)"/>
+        <text x="486" y="213" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="12" letter-spacing="0.5">······153c16</text>
+        <rect x="762" y="201" width="50" height="16" rx="3" fill="#240d16" stroke="#881337" stroke-width="0.8"/>
+        <text x="787" y="212.5" fill="#fda4af" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="8.5" font-weight="700" text-anchor="middle">MASKED</text>
+
+        <!-- Private Repo Row -->
+        <rect x="460" y="226" width="360" height="26" rx="5" fill="#080d18" stroke="#151f33" stroke-width="0.8"/>
+        <circle cx="474" cy="239" r="4" fill="#f43f5e" filter="url(#badge-glow)"/>
+        <text x="486" y="243" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="12" letter-spacing="0.5">······22d951</text>
+        <rect x="762" y="231" width="50" height="16" rx="3" fill="#240d16" stroke="#881337" stroke-width="0.8"/>
+        <text x="787" y="242.5" fill="#fda4af" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="8.5" font-weight="700" text-anchor="middle">MASKED</text>
+
+        <!-- Private Repo Row -->
+        <rect x="460" y="256" width="360" height="26" rx="5" fill="#080d18" stroke="#151f33" stroke-width="0.8"/>
+        <circle cx="474" cy="269" r="4" fill="#f43f5e" filter="url(#badge-glow)"/>
+        <text x="486" y="273" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="12" letter-spacing="0.5">······29cb51</text>
+        <rect x="762" y="261" width="50" height="16" rx="3" fill="#240d16" stroke="#881337" stroke-width="0.8"/>
+        <text x="787" y="272.5" fill="#fda4af" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="8.5" font-weight="700" text-anchor="middle">MASKED</text>
+
+        <!-- Private Repo Row -->
+        <rect x="460" y="286" width="360" height="26" rx="5" fill="#080d18" stroke="#151f33" stroke-width="0.8"/>
+        <circle cx="474" cy="299" r="4" fill="#f43f5e" filter="url(#badge-glow)"/>
+        <text x="486" y="303" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="12" letter-spacing="0.5">······35a574</text>
+        <rect x="762" y="291" width="50" height="16" rx="3" fill="#240d16" stroke="#881337" stroke-width="0.8"/>
+        <text x="787" y="302.5" fill="#fda4af" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="8.5" font-weight="700" text-anchor="middle">MASKED</text>
+
+        <!-- Private Repo Row -->
+        <rect x="460" y="316" width="360" height="26" rx="5" fill="#080d18" stroke="#151f33" stroke-width="0.8"/>
+        <circle cx="474" cy="329" r="4" fill="#f43f5e" filter="url(#badge-glow)"/>
+        <text x="486" y="333" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="12" letter-spacing="0.5">······6e49ce</text>
+        <rect x="762" y="321" width="50" height="16" rx="3" fill="#240d16" stroke="#881337" stroke-width="0.8"/>
+        <text x="787" y="332.5" fill="#fda4af" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="8.5" font-weight="700" text-anchor="middle">MASKED</text>
+
+        <!-- Private Repo Row -->
+        <rect x="460" y="346" width="360" height="26" rx="5" fill="#080d18" stroke="#151f33" stroke-width="0.8"/>
+        <circle cx="474" cy="359" r="4" fill="#f43f5e" filter="url(#badge-glow)"/>
+        <text x="486" y="363" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="12" letter-spacing="0.5">······83305c</text>
+        <rect x="762" y="351" width="50" height="16" rx="3" fill="#240d16" stroke="#881337" stroke-width="0.8"/>
+        <text x="787" y="362.5" fill="#fda4af" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="8.5" font-weight="700" text-anchor="middle">MASKED</text>
+
+        <!-- Private Repo Row -->
+        <rect x="460" y="376" width="360" height="26" rx="5" fill="#080d18" stroke="#151f33" stroke-width="0.8"/>
+        <circle cx="474" cy="389" r="4" fill="#f43f5e" filter="url(#badge-glow)"/>
+        <text x="486" y="393" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="12" letter-spacing="0.5">······9603fa</text>
+        <rect x="762" y="381" width="50" height="16" rx="3" fill="#240d16" stroke="#881337" stroke-width="0.8"/>
+        <text x="787" y="392.5" fill="#fda4af" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="8.5" font-weight="700" text-anchor="middle">MASKED</text>
+
+        <!-- Private Repo Row -->
+        <rect x="460" y="406" width="360" height="26" rx="5" fill="#080d18" stroke="#151f33" stroke-width="0.8"/>
+        <circle cx="474" cy="419" r="4" fill="#f43f5e" filter="url(#badge-glow)"/>
+        <text x="486" y="423" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="12" letter-spacing="0.5">······b93c62</text>
+        <rect x="762" y="411" width="50" height="16" rx="3" fill="#240d16" stroke="#881337" stroke-width="0.8"/>
+        <text x="787" y="422.5" fill="#fda4af" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="8.5" font-weight="700" text-anchor="middle">MASKED</text>
+
+        <!-- Private Repo Row -->
+        <rect x="460" y="436" width="360" height="26" rx="5" fill="#080d18" stroke="#151f33" stroke-width="0.8"/>
+        <circle cx="474" cy="449" r="4" fill="#f43f5e" filter="url(#badge-glow)"/>
+        <text x="486" y="453" fill="#94a3b8" font-family="ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Monaco, Consolas, 'Liberation Mono', monospace" font-size="12" letter-spacing="0.5">······ca1b2f</text>
+        <rect x="762" y="441" width="50" height="16" rx="3" fill="#240d16" stroke="#881337" stroke-width="0.8"/>
+        <text x="787" y="452.5" fill="#fda4af" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="8.5" font-weight="700" text-anchor="middle">MASKED</text>
+    </g>
+
+  <!-- Footer Specification Bar -->
+  <text x="432" y="512" fill="#64748b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="500" text-anchor="middle">
+    영지식 SHA-256 마스킹 텔레메트리 · 자동화 데일리 GitOps 지도 매핑 · KS-GG-AI
+  </text>
+</svg>
