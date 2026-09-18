@@ -1,38 +1,71 @@
 <div align="center">
 
+<p>
+  <img src="../assets/banner.svg" alt="GitHub Organization Map &amp; Cartography" width="100%" />
+</p>
+
 # github-org-map-public
 
 <p>
-  <a href="../../README.md">🇺🇸 English</a> ·
-  <a href="./ko.md">🇰🇷 한국어</a> ·
-  <a href="./zh-CN.md">🇨🇳 中文</a> ·
-  <a href="./es.md">🇪🇸 Español</a> ·
-  <a href="./hi.md">🇮🇳 हिन्दी</a><br />
-  <strong>🇸🇦 العربية</strong> ·
-  <a href="./pt-BR.md">🇧🇷 Português</a> ·
-  <a href="./ru.md">🇷🇺 Русский</a> ·
-  <a href="./fr.md">🇫🇷 Français</a> ·
-  <a href="./id.md">🇮🇩 Bahasa Indonesia</a>
+  <strong>تخطيط طوبولوجي يومي مؤتمت لمستودعات KS-GG-AI مع إخفاء أمني قائم على تشفير SHA-256 خالي من المعرفة</strong>
 </p>
 
-</div>
+<p>
+  <a href="../../README.md">🇺🇸 English</a> · <a href="./ko.md">🇰🇷 한국어</a> · <a href="./zh-CN.md">🇨🇳 中文</a> · <a href="./es.md">🇪🇸 Español</a> · <a href="./hi.md">🇮🇳 हिन्दी</a><br />
+  <strong>🇸🇦 العربية</strong> · <a href="./pt-BR.md">🇧🇷 Português</a> · <a href="./ru.md">🇷🇺 Русский</a> · <a href="./fr.md">🇫🇷 Français</a> · <a href="./id.md">🇮🇩 Bahasa Indonesia</a>
+</p>
 
-<div dir="rtl">
-
-## حول
-
-خريطة تتحدث يوميًا لمستودعات حساب KS-GG-AI ومؤسسة AI-GG-AUTO-WORK. تظهر المستودعات العامة بأسمائها الحقيقية، بينما تظهر المستودعات الخاصة كتسميات مخفية فقط، ويُستبعد بعضها تمامًا. تُحفظ لقطة كل يوم في <code>history/</code> وتُجمع في صورة GIF متحركة.
+<p>
+  <a href="https://github.com/KS-GG-AI/github-org-map-public/releases"><img src="https://img.shields.io/badge/Release-v1.0.0-A78BFA?style=flat-square&logo=github&labelColor=161126" alt="Release" /></a>
+  <a href="../../LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square&labelColor=161126" alt="License: MIT" /></a>
+  <img src="https://img.shields.io/badge/TypeScript-5.0+-3178C6.svg?style=flat-square&logo=typescript&logoColor=white&labelColor=161126" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Privacy-Zero--Knowledge%20SHA--256-F43F5E.svg?style=flat-square&labelColor=161126" alt="Privacy: SHA-256" />
+  <img src="https://img.shields.io/badge/Refresh-Automated%20Daily%20Cron-10B981.svg?style=flat-square&labelColor=161126" alt="Daily Automation" />
+</p>
 
 <p align="center">
-  <img src="../../org-map.svg" alt="خريطة مستودعات حساب KS-GG-AI ومؤسسة AI-GG-AUTO-WORK، وتظهر فيها المستودعات الخاصة كتسميات مخفية." width="100%" />
+  <img src="../../org-map.svg" alt="GitHub Organization Map" width="100%" />
 </p>
 
-<sub>تفاصيل الإعداد والأسرار وسير العمل موجودة في <a href="../../README.md">ملف README الإنجليزي</a>.</sub>
-
-## تواصل
-
-للأسئلة أو الملاحظات أو الأفكار حول الخريطة، هذه أوضح نقاط البداية.
-
-[ملف GitHub](https://github.com/KS-GG-AI) · [مستودع الملف الشخصي](https://github.com/KS-GG-AI/KS-GG-AI) · [فتح مسألة](https://github.com/KS-GG-AI/KS-GG-AI/issues/new)
-
 </div>
+
+---
+
+## حول المشروع
+
+خريطة محدثة يوميًا للمستودعات التابعة لحساب KS-GG-AI ومنظمة AI-GG-AUTO-WORK. تظهر المستودعات العامة بأسمائها الحقيقية؛ بينما تظهر المستودعات الخاصة كتسميات مقنعة بأمان، ويتم حفظ السجل في `history/` ودمجه في صورة GIF متحركة.
+
+## آلية العمل
+
+يقوم هذا المستودع بإنشاء الخريطة تلقائيًا: لقطة SVG لليوم، وسجل تاريخي مؤرخ، وصورة GIF متحركة تعرض تطور البنية مع الوقت.
+
+## الأسرار المطلوبة (Secrets)
+
+يتطلب سير العمل 3 أسرار: `USER_READ_TOKEN` و `ORG_READ_TOKEN` و `MASK_SALT`.
+
+## الجدول الزمني ومسار العمل
+
+يعمل `.github/workflows/refresh.yml` وفق جدول يومي دقيق مع فصل كامل بين صلاحيات القراءة والدفع.
+
+## التشغيل المحلي
+
+```sh
+npm install
+USER_READ_TOKEN=ghp_xxx ORG_READ_TOKEN=ghp_yyy MASK_SALT=<the salt> npm run generate
+```
+
+## الإعدادات
+
+قم بتعديل `data/config.json` لتخصيص الحسابات والمنظمات والمنطقة الزمنية ومعدل إطارات GIF.
+
+## الاختبارات
+
+```sh
+npm test
+```
+
+## التواصل والدعم
+
+لأي استفسارات أو ملاحظات، يُرجى استخدام الروابط الرسمية أدناه.
+
+[GitHub 프로필](https://github.com/KS-GG-AI) · [프로필 저장소](https://github.com/KS-GG-AI/KS-GG-AI) · [이슈 등록](https://github.com/KS-GG-AI/KS-GG-AI/issues/new)

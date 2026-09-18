@@ -85,9 +85,9 @@ export async function buildGif(
         height: canvasHeight,
         fit: 'contain',
         position: 'top',
-        background: '#ffffff',
+        background: '#0d1117',
       })
-      .flatten({ background: '#ffffff' })
+      .flatten({ background: '#0d1117' })
       .ensureAlpha()
       .raw()
       .toBuffer({ resolveWithObject: true });

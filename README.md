@@ -1,6 +1,14 @@
 <div align="center">
 
+<p>
+  <img src="docs/assets/banner.svg" alt="GitHub Organization Map &amp; Cartography" width="100%" />
+</p>
+
 # github-org-map-public
+
+<p>
+  <strong>Automated daily cartography and topology mapping of KS-GG-AI repositories with zero-knowledge SHA-256 privacy masking.</strong>
+</p>
 
 <p>
   <strong>🇺🇸 English</strong> ·
@@ -15,15 +23,25 @@
   <a href="./docs/locales/id.md">🇮🇩 Bahasa Indonesia</a>
 </p>
 
-</div>
-
-## About
-
-A daily-refreshed map of the repositories owned by the KS-GG-AI account and the AI-GG-AUTO-WORK organization. Public repositories appear with their real names; private repositories appear only as masked labels, and some are omitted entirely. Each day's snapshot is kept in `history/` and combined into an animated GIF.
+<p>
+  <a href="https://github.com/KS-GG-AI/github-org-map-public/releases"><img src="https://img.shields.io/badge/Release-v1.0.0-A78BFA?style=flat-square&logo=github&labelColor=161126" alt="Release" /></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=flat-square&labelColor=161126" alt="License: MIT" /></a>
+  <img src="https://img.shields.io/badge/TypeScript-5.0+-3178C6.svg?style=flat-square&logo=typescript&logoColor=white&labelColor=161126" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Privacy-Zero--Knowledge%20SHA--256-F43F5E.svg?style=flat-square&labelColor=161126" alt="Privacy: SHA-256" />
+  <img src="https://img.shields.io/badge/Refresh-Automated%20Daily%20Cron-10B981.svg?style=flat-square&labelColor=161126" alt="Daily Automation" />
+</p>
 
 <p align="center">
   <img src="./org-map.svg" alt="Organization map of the KS-GG-AI account and the AI-GG-AUTO-WORK organization, with private repositories shown as masked labels." width="100%" />
 </p>
+
+</div>
+
+---
+
+## About
+
+A daily-refreshed map of the repositories owned by the KS-GG-AI account and the AI-GG-AUTO-WORK organization. Public repositories appear with their real names; private repositories appear only as masked labels, and some are omitted entirely. Each day's snapshot is kept in `history/` and combined into an animated GIF.
 
 ## How it works
 
