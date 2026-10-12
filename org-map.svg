@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 864 526" width="864" height="526" role="img" aria-label="GitHub organization map for KS-GG-AI on 2026-10-12">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 864 526" width="864" height="526" role="img" aria-label="GitHub organization map for KS-GG-AI on 2026-10-13">
   <defs>
     <!-- Dark Homelab Canvas Gradient -->
     <linearGradient id="canvas-bg" x1="0" y1="0" x2="864" y2="526" gradientUnits="userSpaceOnUse">
@@ -38,7 +38,7 @@
 
     <!-- Title & Date -->
     <text x="52" y="24" fill="#f8fafc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="14.5" font-weight="700">GitHub Organization Map — KS-GG-AI</text>
-    <text x="52" y="40" fill="#7dd3fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600">SNAPSHOT: 2026-10-12 · DAILY TELEMETRY</text>
+    <text x="52" y="40" fill="#7dd3fc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-size="11" font-weight="600">SNAPSHOT: 2026-10-13 · DAILY TELEMETRY</text>
 
     
       <!-- Metric Chip 1: Public -->
